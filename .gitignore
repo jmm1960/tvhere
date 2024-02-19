@@ -1,0 +1,7 @@
+.DS_Store
+.idea
+live.*
+tvhere.example.m3u
+tvhere.example.txt
+configs/local
+docker-compose.yml

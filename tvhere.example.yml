@@ -1,0 +1,47 @@
+sources:
+  - { name: iptv.org-cn, uri: https://iptv-org.github.io/iptv/countries/cn.m3u }
+
+channels:
+  # 中国中央电视台
+  - { name: CCTV-1, station: CCTV, regex: "^CCTV-?1([^0-9].*|$)" }
+  - { name: CCTV-2, station: CCTV, regex: "^CCTV-?2([^0-9].*|$)" }
+  - { name: CCTV-3, station: CCTV, regex: "CCTV-?3.*" }
+  - { name: CCTV-4, station: CCTV, regex: "^CCTV-?4([^Kk].*|$)" }
+  - { name: CCTV-5, station: CCTV, regex: "^CCTV-?5([^⁺+].*|$)" }
+  - { name: CCTV-5+, station: CCTV, regex: "CCTV-?5[⁺+].*" }
+  - { name: CCTV-6, station: CCTV, regex: "CCTV-?6.*" }
+  - { name: CCTV-7, station: CCTV, regex: "CCTV-?7.*" }
+  - { name: CCTV-8, station: CCTV, regex: "^CCTV-?8([^Kk].*|$)" }
+  - { name: CCTV-9, station: CCTV, regex: "CCTV-?9.*" }
+  - { name: CCTV-10, station: CCTV, regex: "CCTV-?10.*" }
+  - { name: CCTV-11, station: CCTV, regex: "CCTV-?11.*" }
+  - { name: CCTV-12, station: CCTV, regex: "CCTV-?12.*" }
+  - { name: CCTV-13, station: CCTV, regex: "CCTV-?13.*" }
+  - { name: CCTV-14, station: CCTV, regex: "CCTV-?14.*" }
+  - { name: CCTV-15, station: CCTV, regex: "CCTV-?15.*" }
+  - { name: CCTV-16, station: CCTV, regex: "CCTV-?16.*" }
+  - { name: CCTV-17, station: CCTV, regex: "CCTV-?17.*" }
+  - { name: CCTV-4K, station: CCTV, regex: "CCTV-?4[Kk].*" }
+  - { name: CCTV-8K, station: CCTV, regex: "CCTV-?8[Kk].*" }
+  # 中国环球电视网
+  - { name: CGTN英语, station: CGTN, regex: "^(CGTN[ -]?(英文|英语|新闻|News|NEWS).*)|(CGTN ?(高清|HD)?)$" }
+  - { name: CGTN纪录, station: CGTN, regex: "^CGTN[ -]?(纪实|纪录|Documentary|DOCUMENTARY).*$" }
+  - { name: CGTN西班牙语, station: CGTN, regex: "^CGTN[ -]?(西语|西班牙语|Español).*$" }
+  - { name: CGTN法语, station: CGTN, regex: "^CGTN[ -]?(法语|Français).*$" }
+  - { name: CGTN阿拉伯语, station: CGTN, regex: "^CGTN[ -]?(阿语|阿拉伯语|العربية).*$" }
+  - { name: CGTN俄语, station: CGTN, regex: "^CGTN[ -]?(俄语|Русский).*$" }
+  # 中国新华新闻电视网
+  - { name: CNC中文, station: CNC, regex: "CNC ?(中文|Chinese).*" }
+  - { name: CNC英语, station: CNC, regex: "CNC ?(英文|英语|English|World( English)?).*" }
+  # 中国教育电视台
+  - { name: CETV-1, station: CETV, regex: "(CETV|中国教育)( -)?1.*" }
+  - { name: CETV-2, station: CETV, regex: "(CETV|中国教育)( -)?2.*" }
+  - { name: CETV-3, station: CETV, regex: "(CETV|中国教育)( -)?3.*" }
+  - { name: CETV-4, station: CETV, regex: "(CETV|中国教育)( -)?4.*" }
+
+groups:
+  - { name: 全国, stations: [ CCTV, CGTN, CNC ], }
+  - { name: 教育, channels: [ CETV-1, CETV-2, CETV-3, CETV-4 ] }
+
+epg: [ http://epg.51zmt.top:8000/e.xml ]
+exports: [ em3u, txt ]
